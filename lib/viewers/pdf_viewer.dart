@@ -57,10 +57,12 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
     if (page != null && page >= 1 && page <= total) {
       // pdfx 의 jumpToPage(n) 은 내부에서 n+1 쪽으로 가는 버그가 있어
       // 정확한 쪽 번호를 받는 animateToPage 를 씀
-      _controller.animateToPage(
+      await _controller.animateToPage(
         pageNumber: page,
         duration: const Duration(milliseconds: 250),
       );
+      // 프로그램으로 이동하면 pdfx 가 쪽 번호 표시를 갱신하지 않아 직접 맞춤
+      if (mounted) _controller.pageListenable.value = page;
     }
   }
 

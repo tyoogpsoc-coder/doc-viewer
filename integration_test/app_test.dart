@@ -78,9 +78,9 @@ void main() {
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField), '5');
     await tester.tap(find.text('이동'));
-    await waitFor(tester, find.text('5 / 10'));
-    await tester.pump(const Duration(seconds: 2));
+    await tester.pump(const Duration(seconds: 2)); // 이동 애니메이션 + 렌더 대기
     await shot(tester, '3_pdf_page5');
+    await waitFor(tester, find.text('5 / 10'));
   });
 
   testWidgets('3. 엑셀 열기 · 시트 전환 · 셀 상세', (tester) async {
