@@ -22,6 +22,10 @@ dependencies:
   # 최근 파일 목록 저장
   shared_preferences: ^2.3.0
 
+# flutter_rhwp 는 flutter_rust_bridge 2.11.1 로 코드 생성됨 — 런타임 버전을 맞춰야 함
+dependency_overrides:
+  flutter_rust_bridge: 2.11.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

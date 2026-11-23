@@ -19,6 +19,8 @@ import 'fixtures.g.dart';
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   var surfaceConverted = false;
+  // 테스트마다 화면 캡처 준비를 새로 해야 함
+  setUp(() => surfaceConverted = false);
 
   Future<void> shot(WidgetTester tester, String name) async {
     if (Platform.isAndroid && !surfaceConverted) {
