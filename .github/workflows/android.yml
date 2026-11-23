@@ -4,6 +4,13 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write   # Release에 APK 올리기
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -56,6 +63,17 @@ jobs:
         with:
           name: doc-viewer-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      # 휴대폰에서 바로 받을 수 있는 고정 링크:
+      # https://github.com/<저장소>/releases/latest/download/doc-viewer.apk
+      - name: 다운로드 링크(Release) 갱신
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk doc-viewer.apk
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest doc-viewer.apk --title "최신 빌드" --notes "커밋 ${GITHUB_SHA::7} 에서 자동 빌드"
 
       # ---------- 에뮬레이터 통합 테스트 ----------
       - name: KVM 사용 설정
