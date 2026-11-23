@@ -1,0 +1,111 @@
+Resolving dependencies...
+Downloading packages...
+  cross_file 0.3.5+5 (0.4.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+! flutter_rust_bridge 2.11.1 (overridden) (2.13.0 available)
+  lints 5.1.1 (6.1.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.14 (0.7.15 available)
+  vector_math 2.4.3 (2.4.4 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+8 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleDebug'...                          
+WARNING: Your app uses the following plugins that apply Kotlin Gradle Plugin (KGP): pdfx
+Future versions of Flutter will fail to build if your app uses plugins that apply KGP.
+
+Please check the changelogs of these plugins and upgrade to a version that supports Built-in Kotlin.
+If no such version exists, report the issue to the plugin. If necessary, here is a guide on filing
+an issue against a plugin: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers#report-incompatible-kotlin-gradle-plugin-usage-to-plugin-authors
+
+If you are a plugin author, please migrate your plugin to Built-in Kotlin using this guide: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors
+The --precompile flag is no longer used and does nothing.
+Resolving dependencies...
+Downloading packages...
+  args 2.4.2 (2.7.0 available)
+  collection 1.18.0 (1.19.1 available)
+  convert 3.1.1 (3.1.2 available)
+  crypto 3.0.3 (3.0.8 available)
+  ed25519_edwards 0.3.1 (0.3.2 available)
+  github 9.17.0 (9.26.0 available)
+  http 1.1.0 (1.6.0 available)
+  http_parser 4.0.2 (4.1.2 available)
+  logging 1.2.0 (1.3.0 available)
+  path 1.8.0 (1.9.1 available)
+  petitparser 5.4.0 (7.1.0 available)
+  source_span 1.10.0 (1.10.2 available)
+  toml 0.14.0 (0.18.0 available)
+  version 3.0.0 (3.0.2 available)
+  yaml 3.1.2 (3.1.4 available)
+Got dependencies!
+15 packages have newer versions incompatible with dependency constraints.
+Try `dart pub outdated` for more information.
+Compiling bin/build_tool_runner.dart to kernel file bin/build_tool_runner.dill.
+INFO: Precompiled binaries are disabled
+INFO: Building flutter_rhwp for x86_64-linux-android
+INFO: Building flutter_rhwp for i686-linux-android
+INFO: Building flutter_rhwp for x86_64-linux-android
+Running Gradle task 'assembleDebug'...                            309.4s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          862ms
+I/flutter ( 6256): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(105)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 6256): Width is zero. 0,0
+D/FlutterRenderer( 6256): Width is zero. 0,0
+D/FlutterJNI( 6256): Sending viewport metrics to the engine.
+D/FlutterJNI( 6256): Sending viewport metrics to the engine.
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:40163/C0vZwK3DhR8=/
+VMServiceFlutterDriver: Isolate found with number: 6705985370955767
+VMServiceFlutterDriver: Isolate 6705985370955767 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter ( 6256): 00:00 +0: 1. 홈 화면
+VMServiceFlutterDriver: Connected to Flutter application.
+I/Choreographer( 6256): Skipped 77 frames!  The application may be doing too much work on its main thread.
+D/ProfileInstaller( 6256): Installing profile for com.example.docviewer.doc_viewer
+D/FlutterJNI( 6256): Sending viewport metrics to the engine.
+D/CompatibilityChangeReporter( 6256): Compat change id reported: 236825255; UID 10192; state: ENABLED
+I/flutter ( 6256): 00:03 +1: 2. PDF 열기 · 페이지 수 · 페이지 이동
+D/EGL_emulation( 6256): app_time_stats: avg=551.60ms min=418.42ms max=775.03ms count=3
+D/CompatibilityChangeReporter( 6256): Compat change id reported: 247079863; UID 10192; state: ENABLED
+D/pdf_renderer( 6256): OpenDataDocument. Created file: /data/user/0/com.example.docviewer.doc_viewer/cache/fcfa8531e53b4aecaa46523aa147364e.pdf
+D/pdf_renderer( 6256): OpenFileDocument. File: /data/user/0/com.example.docviewer.doc_viewer/cache/fcfa8531e53b4aecaa46523aa147364e.pdf
+VMServiceFlutterDriver: request_data message is taking a long time to complete...
+D/EGL_emulation( 6256): app_time_stats: avg=879.45ms min=133.62ms max=2244.71ms count=3
+D/EGL_emulation( 6256): app_time_stats: avg=2616.15ms min=2616.15ms max=2616.15ms count=1
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:68a9ce0: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:68a9ce0: onFailed at PHASE_CLIENT_VIEW_SERVED
+W/InputMethodManager( 6256): Ignoring showSoftInput() as view=io.flutter.embedding.android.FlutterView{a9b153b VFE...... .F....ID 0,0-1080,2337 #1} is not served.
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:d6f34279: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:d6f34279: onFailed at PHASE_CLIENT_VIEW_SERVED
+W/InputMethodManager( 6256): Ignoring showSoftInput() as view=io.flutter.embedding.android.FlutterView{a9b153b VFE...... .F....ID 0,0-1080,2337 #1} is not served.
+I/AssistStructure( 6256): Flattened final assist data: 468 bytes, containing 1 windows, 3 views
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:4ad38650: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:4ad38650: onFailed at PHASE_CLIENT_VIEW_SERVED
+W/InputMethodManager( 6256): Ignoring showSoftInput() as view=io.flutter.embedding.android.FlutterView{a9b153b VFE...... .F...... 0,0-1080,2337 #1 aid=1073741824} is not served.
+D/EGL_emulation( 6256): app_time_stats: avg=858.11ms min=614.16ms max=1102.06ms count=2
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:1a987a30: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+I/ImeTracker( 6256): com.example.docviewer.doc_viewer:1a987a30: onFailed at PHASE_CLIENT_VIEW_SERVED
+D/EGL_emulation( 6256): app_time_stats: avg=381.82ms min=12.90ms max=1738.44ms count=9
+D/EGL_emulation( 6256): app_time_stats: avg=2851.82ms min=2851.82ms max=2851.82ms count=1
+D/EGL_emulation( 6256): app_time_stats: avg=517.17ms min=506.65ms max=527.70ms count=2
+I/flutter ( 6256): 00:11 +2: 3. 엑셀 열기 · 시트 전환 · 셀 상세
+D/EGL_emulation( 6256): app_time_stats: avg=633.15ms min=534.61ms max=731.69ms count=2
+D/EGL_emulation( 6256): app_time_stats: avg=715.89ms min=544.82ms max=886.96ms count=2
+D/EGL_emulation( 6256): app_time_stats: avg=200.60ms min=23.69ms max=473.45ms count=7
+D/EGL_emulation( 6256): app_time_stats: avg=1146.90ms min=1146.90ms max=1146.90ms count=1
+I/flutter ( 6256): 00:14 +3: 4. 한글 HWP 열기 · 텍스트 보기
+D/EGL_emulation( 6256): app_time_stats: avg=851.39ms min=84.30ms max=3446.48ms count=5
+D/EGL_emulation( 6256): app_time_stats: avg=2262.87ms min=231.49ms max=4294.26ms count=2
+D/EGL_emulation( 6256): app_time_stats: avg=198.36ms min=35.76ms max=446.06ms count=7
+D/EGL_emulation( 6256): app_time_stats: avg=1228.01ms min=574.38ms max=1881.64ms count=2
+I/flutter ( 6256): 00:21 +4: 5. 한글 HWPX 열기 · 텍스트 보기
+D/EGL_emulation( 6256): app_time_stats: avg=1100.51ms min=29.01ms max=3021.20ms count=3
+D/EGL_emulation( 6256): app_time_stats: avg=1822.48ms min=223.89ms max=3421.08ms count=2
+D/EGL_emulation( 6256): app_time_stats: avg=163.83ms min=49.09ms max=259.19ms count=8
+D/EGL_emulation( 6256): app_time_stats: avg=217.58ms min=165.28ms max=271.42ms count=5
+D/EGL_emulation( 6256): app_time_stats: avg=309.95ms min=213.27ms max=581.37ms count=4
+D/EGL_emulation( 6256): app_time_stats: avg=2476.90ms min=759.97ms max=4193.84ms count=2
+I/flutter ( 6256): 00:30 +5: (tearDownAll)
+I/flutter ( 6256): 00:30 +6: All tests passed!
+All tests passed.
