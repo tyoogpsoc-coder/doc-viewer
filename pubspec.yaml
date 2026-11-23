@@ -1,0 +1,35 @@
+name: doc_viewer
+description: PDF · 한글(HWP/HWPX) · 엑셀(XLSX/XLS) 문서 뷰어
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+  flutter: '>=3.35.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 파일 선택 (v13: FilePicker.pickFile() → PlatformFile?)
+  file_picker: ^13.3.2
+  # PDF 렌더링 (안드로이드/iOS 네이티브 렌더러, 핀치 줌)
+  pdfx: ^2.11.0
+  # 엑셀 읽기 (.xlsx + 구형 .xls 읽기 지원)
+  excel_plus: ^2.29.0
+  # 한글 HWP/HWPX 파서·렌더러 (Rust rhwp 엔진)
+  flutter_rhwp: ^2026.6.2
+  # 최근 파일 목록 저장
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

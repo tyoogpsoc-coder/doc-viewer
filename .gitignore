@@ -1,0 +1,12 @@
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+*.iml
+screenshots/
+integration_test/fixtures.g.dart
+# flutter create 로 CI에서 생성
+/android/
+/ios/
+pubspec.lock
