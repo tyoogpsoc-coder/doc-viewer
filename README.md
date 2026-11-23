@@ -28,6 +28,8 @@ cd doc_viewer
 # Android/iOS 플랫폼 폴더 생성 (lib/, pubspec.yaml은 그대로 유지됨)
 flutter create --platforms=android,ios --org com.example .
 flutter pub get
+python3 tool/patch_android.py    # minSdk 24, 앱 이름, lint 설정
+python3 tool/patch_cargokit.py   # 한글 엔진 빌드 스크립트 Gradle 9 대응
 flutter run
 ```
 

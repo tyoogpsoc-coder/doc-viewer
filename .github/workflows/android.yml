@@ -39,6 +39,7 @@ jobs:
       - name: 패키지 설치
         run: |
           flutter pub get
+          python3 tool/patch_cargokit.py
           python3 tool/gen_fixtures.py
 
       - name: 정적 분석
