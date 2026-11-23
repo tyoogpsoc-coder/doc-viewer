@@ -55,7 +55,12 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
       ),
     );
     if (page != null && page >= 1 && page <= total) {
-      _controller.jumpToPage(page);
+      // pdfx 의 jumpToPage(n) 은 내부에서 n+1 쪽으로 가는 버그가 있어
+      // 정확한 쪽 번호를 받는 animateToPage 를 씀
+      _controller.animateToPage(
+        pageNumber: page,
+        duration: const Duration(milliseconds: 250),
+      );
     }
   }
 

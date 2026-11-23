@@ -89,11 +89,13 @@ void main() {
     expect(find.text('키보드'), findsOneWidget);
     await shot(tester, '4_excel_sheet1');
 
-    await tester.tap(find.textContaining('C2*D2').first);
+    // 화면 폭 안에 보이는 B2 셀(노트북)을 눌러 상세 보기
+    await tester.tap(find.text('노트북'));
     await tester.pumpAndSettle();
-    expect(find.text('E2'), findsOneWidget);
+    expect(find.text('B2'), findsOneWidget);
+    expect(find.text('복사'), findsOneWidget);
     await shot(tester, '5_excel_cell_detail');
-    Navigator.of(tester.element(find.text('E2'))).pop();
+    Navigator.of(tester.element(find.text('B2'))).pop();
     await tester.pumpAndSettle();
 
     await tester.tap(find.widgetWithText(ChoiceChip, '직원'));
