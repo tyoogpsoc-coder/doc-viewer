@@ -69,18 +69,18 @@ void main() {
 
   testWidgets('2. PDF 열기 · 페이지 수 · 페이지 이동', (tester) async {
     await openViewer(tester, 'sample.pdf');
-    await waitFor(tester, find.text('1 / 3'));
+    await waitFor(tester, find.text('1 / 10'));
     expect(find.byType(PdfViewPinch), findsOneWidget);
     await tester.pump(const Duration(seconds: 2)); // 페이지 텍스처 렌더 대기
     await shot(tester, '2_pdf_page1');
 
-    await tester.tap(find.text('1 / 3'));
+    await tester.tap(find.text('1 / 10'));
     await tester.pumpAndSettle();
-    await tester.enterText(find.byType(TextField), '3');
+    await tester.enterText(find.byType(TextField), '5');
     await tester.tap(find.text('이동'));
-    await waitFor(tester, find.text('3 / 3'));
+    await waitFor(tester, find.text('5 / 10'));
     await tester.pump(const Duration(seconds: 2));
-    await shot(tester, '3_pdf_page3');
+    await shot(tester, '3_pdf_page5');
   });
 
   testWidgets('3. 엑셀 열기 · 시트 전환 · 셀 상세', (tester) async {
