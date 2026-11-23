@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'dart:typed_data';
 
-import 'package:excel_plus/excel_plus.dart';
+import 'package:excel_plus/excel_plus.dart' hide Border;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

@@ -37,7 +37,9 @@ jobs:
           python3 tool/patch_android.py
 
       - name: 패키지 설치
-        run: flutter pub get
+        run: |
+          flutter pub get
+          python3 tool/gen_fixtures.py
 
       - name: 정적 분석
         run: flutter analyze --no-fatal-infos --no-fatal-warnings
@@ -60,9 +62,6 @@ jobs:
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
-
-      - name: 테스트 샘플 준비
-        run: python3 tool/gen_fixtures.py
 
       - name: 에뮬레이터에서 통합 테스트
         uses: reactivecircus/android-emulator-runner@v2
